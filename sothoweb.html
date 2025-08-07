@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SothoSite - Web Hosting, Domain Services & Web Development in Lesotho</title>
+    <meta name="description" content="SothoSite offers affordable web hosting, domain registration, web development, and SEO services in Lesotho. Get your business online with our professional solutions.">
+    <meta name="keywords" content="web hosting Lesotho, domain registration Lesotho, web development Lesotho, SEO services Lesotho, website design Lesotho">
+    <meta name="author" content="SothoSite">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sothosite.com">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="SothoSite - Web Hosting & Web Services in Lesotho">
+    <meta property="og:description" content="Professional web hosting, domain registration, and web development services in Lesotho.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sothosite.com">
+    <meta property="og:image" content="https://sothosite.com/images/sothosite-logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4a6bff;
+            --secondary: #ff7e5f;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+            --success: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7ff;
+            color: var(--dark);
+            line-height: 1.6;
+            position: relative;
+            padding-bottom: 100px;
+            overflow-x: hidden;
+        }
+        
+        /* Watermark Background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><text x="50%" y="50%" font-family="Arial" font-size="30" fill="rgba(74, 107, 255, 0.03)" text-anchor="middle" dominant-baseline="middle" transform="rotate(-45 200 200)">SothoSite</text></svg>');
+            background-repeat: repeat;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+            z-index: 0;
+            border-radius: 10px;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+        }
+        
+        .price-tables {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .price-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .price-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .price-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .price-header i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .price-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .price-body {
+            padding: 30px;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .price span {
+            font-size: 1rem;
+            font-weight: normal;
+            color: var(--dark);
+        }
+        
+        .price-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .price-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .price-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .price-features li i {
+            color: var(--success);
+            margin-right: 10px;
+        }
+        
+        .price-button {
+            display: block;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+        }
+        
+        .price-button:hover {
+            background: var(--secondary);
+        }
+        
+        .discount-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--secondary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+        
+        .price-card-container {
+            position: relative;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            position: relative;
+            animation: modalFadeIn 0.3s ease-out;
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .close:hover {
+            color: var(--secondary);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input, 
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .form-group input:focus, 
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.2);
+            outline: none;
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #aaa;
+            font-style: italic;
+        }
+        
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: background 0.3s, transform 0.2s;
+        }
+        
+        .submit-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 3px 3px 5px #888;
+        }
+        
+        .facebook-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 110px;
+            right: 40px;
+            background-color: #3b5998;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .facebook-float:hover {
+            transform: scale(1.1);
+            box-shadow: 3px 3px 5px #888;
+        }
+        
+        .contact-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+        }
+        
+        .contact-section h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .contact-card {
+            flex: 1;
+            min-width: 250px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-card i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .free-website-banner {
+            background: var(--secondary);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 126, 95, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 126, 95, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 126, 95, 0);
+            }
+        }
+        
+        /* Domain table styles */
+        .domain-table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .domain-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .domain-table th, .domain-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .domain-table th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .domain-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .domain-table tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .view-more-btn {
+            display: block;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px auto;
+            max-width: 250px;
+            transition: background 0.3s ease;
+        }
+        
+        .view-more-btn:hover {
+            background: var(--secondary);
+            text-decoration: none;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 10px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb span {
+            margin: 0 5px;
+            color: #999;
+        }
+        
+        /* Service Cards Section */
+        .services-section {
+            margin: 50px 0;
+        }
+        
+        .services-section h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .service-card p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .service-features li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .service-features li i {
+            font-size: 1rem;
+            color: var(--success);
+            margin-right: 10px;
+        }
+        
+        .service-price {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .service-price span {
+            font-weight: normal;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Schema Microdata */
+        .organization-info {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .price-tables {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .price-card {
+                max-width: 100%;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .modal-content {
+                margin: 10% auto;
+                padding: 20px;
+            }
+            
+            .whatsapp-float,
+            .facebook-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .facebook-float {
+                bottom: 80px;
+            }
+            
+            .domain-table th, .domain-table td {
+                padding: 8px 10px;
+                font-size: 0.9rem;
+            }
+            
+            .service-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Schema.org Microdata -->
+    <div class="organization-info" itemscope itemtype="https://schema.org/LocalBusiness">
+        <span itemprop="name">SothoSite</span>
+        <span itemprop="description">Web hosting, domain registration, and web development services in Lesotho</span>
+        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="streetAddress">Maseru Machache</span>,
+            <span itemprop="addressLocality">Maseru</span>,
+            <span itemprop="addressRegion">Lesotho</span>
+        </div>
+        Phone: <span itemprop="telephone">+266 5998 1177</span>
+        Email: <span itemprop="email">mosebots11@gmail.com</span>
+    </div>
+
+    <div class="container">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <a href="#">Home</a> <span>/</span> Web Hosting & Domain Services
+        </div>
+        
+        <header>
+            <h1><i class="fas fa-globe"></i> SothoSite</h1>
+            <p>Affordable Web Hosting & Domain Registration in Lesotho</p>
+        </header>
+        
+        <div class="free-website-banner">
+            <i class="fas fa-gift"></i> SPECIAL OFFER: Free website design for all hosting customers!
+        </div>
+        
+        <h2 style="text-align: center; margin-bottom: 20px; color: var(--primary);">Domain Registration Prices</h2>
+        
+        <div class="price-tables">
+            <div class="price-card-container">
+                <div class="price-card">
+                    <div class="price-header">
+                        <i class="fas fa-globe-americas"></i>
+                        <h2>.co.ls</h2>
+                    </div>
+                    <div class="price-body">
+                        <div class="price">M250.00</div>
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> Lesotho commercial domain</li>
+                            <li><i class="fas fa-check"></i> Local business identity</li>
+                            <li><i class="fas fa-check"></i> Great for local SEO</li>
+                            <li><i class="fas fa-check"></i> 1 year registration</li>
+                        </ul>
+                        <button class="price-button" onclick="openModal('.co.ls Domain Registration', 'M250.00')">Register Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="price-card-container">
+                <div class="discount-badge">Popular</div>
+                <div class="price-card">
+                    <div class="price-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h2>.org.ls</h2>
+                    </div>
+                    <div class="price-body">
+                        <div class="price">M250.00</div>
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> For organizations</li>
+                            <li><i class="fas fa-check"></i> Non-profit friendly</li>
+                            <li><i class="fas fa-check"></i> Trusted extension</li>
+                            <li><i class="fas fa-check"></i> 1 year registration</li>
+                        </ul>
+                        <button class="price-button" onclick="openModal('.org.ls Domain Registration', 'M250.00')">Register Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="price-card-container">
+                <div class="price-card">
+                    <div class="price-header">
+                        <i class="fas fa-sitemap"></i>
+                        <h2>.ac.ls</h2>
+                    </div>
+                    <div class="price-body">
+                        <div class="price">M250.00</div>
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> Academic institutions</li>
+                            <li><i class="fas fa-check"></i> Educational organizations</li>
+                            <li><i class="fas fa-check"></i> Schools & universities</li>
+                            <li><i class="fas fa-check"></i> 1 year registration</li>
+                        </ul>
+                        <button class="price-button" onclick="openModal('.ac.ls Domain Registration', 'M250.00')">Register Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="price-card-container">
+                <div class="price-card">
+                    <div class="price-header">
+                        <i class="fas fa-building"></i>
+                        <h2>.net.ls</h2>
+                    </div>
+                    <div class="price-body">
+                        <div class="price">M250.00</div>
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> Network providers</li>
+                            <li><i class="fas fa-check"></i> Tech companies</li>
+                            <li><i class="fas fa-check"></i> Internet services</li>
+                            <li><i class="fas fa-check"></i> 1 year registration</li>
+                        </ul>
+                        <button class="price-button" onclick="openModal('.net.ls Domain Registration', 'M250.00')">Register Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="#all-domains" class="view-more-btn" id="view-more-domains">View More Domain Options</a>
+        
+        <div class="domain-table-container" id="all-domains" style="display: none;">
+            <h2 style="text-align: center; margin: 30px 0; color: var(--primary);">All Domain Extensions</h2>
+            <table class="domain-table">
+                <thead>
+                    <tr>
+                        <th>Domain Extension</th>
+                        <th>Status</th>
+                        <th>Type</th>
+                        <th>Price (ZAR)</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>.co.ls</td>
+                        <td>Hot!</td>
+                        <td>Other</td>
+                        <td>250.00</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.org.ls</td>
+                        <td>Hot!</td>
+                        <td>Other</td>
+                        <td>250.00</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.ac.ls</td>
+                        <td>New!</td>
+                        <td>Other</td>
+                        <td>250.00</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.net.ls</td>
+                        <td>New!</td>
+                        <td>Other</td>
+                        <td>250.00</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.sc.ls</td>
+                        <td>Sale!</td>
+                        <td>Other</td>
+                        <td>250.00</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.ls</td>
+                        <td>New!</td>
+                        <td>-</td>
+                        <td>250.00</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.com</td>
+                        <td>Popular</td>
+                        <td>Popular</td>
+                        <td>345.00</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.org</td>
+                        <td>Popular</td>
+                        <td>Popular</td>
+                        <td>345.00</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.cc</td>
+                        <td>Other</td>
+                        <td>Other</td>
+                        <td>300.00</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.co</td>
+                        <td>Other</td>
+                        <td>Other</td>
+                        <td>850.00</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.info</td>
+                        <td>Popular</td>
+                        <td>Popular</td>
+                        <td>675.00</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.net</td>
+                        <td>Popular</td>
+                        <td>Popular</td>
+                        <td>365.00</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.biz</td>
+                        <td>Popular</td>
+                        <td>Popular</td>
+                        <td>457.50</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.co.za</td>
+                        <td>Other</td>
+                        <td>Other</td>
+                        <td>220</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.org.za</td>
+                        <td>Other</td>
+                        <td>Other</td>
+                        <td>220.00</td>
+                        <td>1 Year</td>
+                    </tr>
+                    <tr>
+                        <td>.net.za</td>
+                        <td>Other</td>
+                        <td>Other</td>
+                        <td>220</td>
+                        <td>1 Year</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h2 style="text-align: center; margin: 40px 0 20px; color: var(--primary);">Web Hosting Packages</h2>
+        
+        <div class="price-tables">
+            <div class="price-card-container">
+                <div class="price-card">
+                    <div class="price-header">
+                        <i class="fas fa-server"></i>
+                        <h2>Monthly Hosting</h2>
+                    </div>
+                    <div class="price-body">
+                        <div class="price">M50 <span>/month</span></div>
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> 2GB Storage</li>
+                            <li><i class="fas fa-check"></i> Unlimited Bandwidth</li>
+                            <li><i class="fas fa-check"></i> 5 Email Accounts</li>
+                            <li><i class="fas fa-check"></i> 24/7 Support</li>
+                            <li><i class="fas fa-check"></i> Free SSL Certificate</li>
+                            <li><i class="fas fa-check"></i> FREE Website Design*</li>
+                        </ul>
+                        <button class="price-button" onclick="openModal('Monthly Hosting', 'M50/month')">Get Started</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="price-card-container">
+                <div class="discount-badge">Save M50</div>
+                <div class="price-card">
+                    <div class="price-header" style="background: var(--secondary);">
+                        <i class="fas fa-rocket"></i>
+                        <h2>Yearly Hosting</h2>
+                    </div>
+                    <div class="price-body">
+                        <div class="price">M550 <span>/year</span></div>
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> <strong>1 month FREE</strong> (Pay for 11, get 12)</li>
+                            <li><i class="fas fa-check"></i> 2GB Storage</li>
+                            <li><i class="fas fa-check"></i> Unlimited Bandwidth</li>
+                            <li><i class="fas fa-check"></i> 5 Email Accounts</li>
+                            <li><i class="fas fa-check"></i> Free Domain for 1 year*</li>
+                            <li><i class="fas fa-check"></i> <strong>FREE Website Design</strong></li>
+                        </ul>
+                        <button class="price-button" style="background: var(--secondary);" onclick="openModal('Yearly Hosting', 'M550/year')">Save Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- New Services Section -->
+        <div class="services-section">
+            <h2><i class="fas fa-laptop-code"></i> Our Web Services</h2>
+            
+            <div class="price-tables">
+                <!-- Web Development Card -->
+                <div class="price-card-container">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <i class="fas fa-code"></i>
+                            <h2>Web Development</h2>
+                        </div>
+                        <div class="price-body">
+                            <div class="price">From M1,500</div>
+                            <ul class="price-features">
+                                <li><i class="fas fa-check"></i> Custom website design</li>
+                                <li><i class="fas fa-check"></i> Responsive for all devices</li>
+                                <li><i class="fas fa-check"></i> CMS integration</li>
+                                <li><i class="fas fa-check"></i> E-commerce solutions</li>
+                                <li><i class="fas fa-check"></i> Ongoing maintenance</li>
+                            </ul>
+                            <button class="price-button" onclick="openModal('Web Development Service', 'From M1,500')">Get a Quote</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SEO Services Card -->
+                <div class="price-card-container">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <i class="fas fa-search-plus"></i>
+                            <h2>SEO Services</h2>
+                        </div>
+                        <div class="price-body">
+                            <div class="price">From M800 <span>/month</span></div>
+                            <ul class="price-features">
+                                <li><i class="fas fa-check"></i> Keyword research</li>
+                                <li><i class="fas fa-check"></i> On-page optimization</li>
+                                <li><i class="fas fa-check"></i> Technical SEO audit</li>
+                                <li><i class="fas fa-check"></i> Local SEO for Lesotho</li>
+                                <li><i class="fas fa-check"></i> Monthly performance reports</li>
+                            </ul>
+                            <button class="price-button" onclick="openModal('SEO Services', 'From M800/month')">Boost Your Traffic</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Company Portfolio Card -->
+                <div class="price-card-container">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <i class="fas fa-briefcase"></i>
+                            <h2>Company Portfolio</h2>
+                        </div>
+                        <div class="price-body">
+                            <div class="price">From M1,200</div>
+                            <ul class="price-features">
+                                <li><i class="fas fa-check"></i> Professional business showcase</li>
+                                <li><i class="fas fa-check"></i> Services/Products display</li>
+                                <li><i class="fas fa-check"></i> Team/profile pages</li>
+                                <li><i class="fas fa-check"></i> Contact forms</li>
+                                <li><i class="fas fa-check"></i> Gallery/Portfolio section</li>
+                            </ul>
+                            <button class="price-button" onclick="openModal('Company Portfolio', 'From M1,200')">Showcase Your Business</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Personal Portfolio Card -->
+                <div class="price-card-container">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <i class="fas fa-user-tie"></i>
+                            <h2>Personal Portfolio</h2>
+                        </div>
+                        <div class="price-body">
+                            <div class="price">From M900</div>
+                            <ul class="price-features">
+                                <li><i class="fas fa-check"></i> Custom personal branding</li>
+                                <li><i class="fas fa-check"></i> Resume/CV integration</li>
+                                <li><i class="fas fa-check"></i> Project showcase</li>
+                                <li><i class="fas fa-check"></i> Blog section</li>
+                                <li><i class="fas fa-check"></i> Social media integration</li>
+                            </ul>
+                            <button class="price-button" onclick="openModal('Personal Portfolio', 'From M900')">Build Your Brand</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- E-commerce Card -->
+                <div class="price-card-container">
+                    <div class="price-card">
+                        <div class="price-header">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h2>E-commerce Website</h2>
+                        </div>
+                        <div class="price-body">
+                            <div class="price">From M2,500</div>
+                            <ul class="price-features">
+                                <li><i class="fas fa-check"></i> Online store setup</li>
+                                <li><i class="fas fa-check"></i> Product catalog</li>
+                            <li><i class="fas fa-check"></i> Secure payment gateway</li>
+                            <li><i class="fas fa-check"></i> Inventory management</li>
+                            <li><i class="fas fa-check"></i> Mobile-friendly design</li>
+                        </ul>
+                        <button class="price-button" onclick="openModal('E-commerce Website', 'From M2,500')">Start Selling Online</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Website Maintenance Card -->
+            <div class="price-card-container">
+                <div class="price-card">
+                    <div class="price-header">
+                        <i class="fas fa-tools"></i>
+                        <h2>Website Maintenance</h2>
+                    </div>
+                    <div class="price-body">
+                        <div class="price">From M300 <span>/month</span></div>
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> Regular updates</li>
+                            <li><i class="fas fa-check"></i> Security monitoring</li>
+                            <li><i class="fas fa-check"></i> Backup services</li>
+                            <li><i class="fas fa-check"></i> Content updates</li>
+                            <li><i class="fas fa-check"></i> Performance optimization</li>
+                        </ul>
+                        <button class="price-button" onclick="openModal('Website Maintenance', 'From M300/month')">Keep Your Site Secure</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contact-section">
+        <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+        <div class="contact-info">
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location</h3>
+                <p>Maseru Machache, Lesotho</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>mosebots11@gmail.com</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>+266 5998 1177</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/26659981177" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Floating Facebook Button -->
+<a href="https://www.facebook.com/ke.lokisa.lifono" class="facebook-float" target="_blank" aria-label="Visit our Facebook page">
+    <i class="fab fa-facebook-f"></i>
+</a>
+
+<!-- Order Form Modal -->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Order Form</h2>
+        <p id="modalPrice" style="text-align: center; font-size: 1.2rem; margin-bottom: 20px;"></p>
+        
+        <form id="orderForm">
+            <input type="hidden" name="service" id="formService">
+            <input type="hidden" name="price" id="formPrice">
+            
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+266 5998 1177">
+            </div>
+            
+            <div class="form-group">
+                <label for="serviceDisplay">Service Interested In</label>
+                <input type="text" id="serviceDisplay" name="serviceDisplay" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="domain">Domain Name (if applicable)</label>
+                <input type="text" id="domain" name="domain" placeholder="example.co.ls">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Additional Information</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us more about your project requirements, special requests, or any questions you might have..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Order</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Modal functions
+    function openModal(service, price) {
+        document.getElementById('modalTitle').textContent = service;
+        document.getElementById('modalPrice').textContent = 'Price: ' + price;
+        document.getElementById('serviceDisplay').value = service + ' (' + price + ')';
+        document.getElementById('formService').value = service;
+        document.getElementById('formPrice').value = price;
+        document.getElementById('orderModal').style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    }
+    
+    function closeModal() {
+        document.getElementById('orderModal').style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    }
+    
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('orderModal')) {
+            closeModal();
+        }
+    }
+    
+    // Toggle domain table visibility
+    document.getElementById('view-more-domains').addEventListener('click', function(e) {
+        e.preventDefault();
+        const table = document.getElementById('all-domains');
+        if (table.style.display === 'none') {
+            table.style.display = 'block';
+            this.textContent = 'Hide Domain Options';
+        } else {
+            table.style.display = 'none';
+            this.textContent = 'View More Domain Options';
+        }
+    });
+    
+    // Form submission handler
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+        
+        // Create email body
+        const subject = `New Order: ${data.service}`;
+        const body = `
+            New Order Request:
+            
+            Service: ${data.service}
+            Price: ${data.price}
+            
+            Customer Details:
+            Name: ${data.name}
+            Email: ${data.email}
+            Phone: ${data.phone}
+            
+            Domain: ${data.domain || 'N/A'}
+            
+            Message:
+            ${data.message || 'No additional information'}
+        `;
+        
+        // Send email (using mailto as fallback)
+        const mailtoLink = `mailto:mosebots11@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoLink;
+        
+        // Show success message
+        alert('Thank you for your order! We have received your request and will contact you shortly.');
+        closeModal();
+        this.reset();
+    });
+    
+    // Track form submissions (you would replace this with your actual analytics code)
+    document.getElementById('orderForm').addEventListener('submit', function() {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-123456789/AbC-D_EFGhIJKLmnOPQRSTU',
+                'value': document.getElementById('formPrice').value,
+                'currency': 'ZAR',
+                'transaction_id': 'ORD-' + Date.now()
+            });
+        }
+    });
+</script>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "SothoSite",
+  "image": "https://sothosite.com/images/sothosite-logo.png",
+  "@id": "https://sothosite.com",
+  "url": "https://sothosite.com",
+  "telephone": "+26659981177",
+  "priceRange": "M50 - M2500",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Maseru Machache",
+    "addressLocality": "Maseru",
+    "addressRegion": "Lesotho"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-29.316667",
+    "longitude": "27.483333"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/ke.lokisa.lifono"
+  ]
+}
+</script>
+</body>
+</html>
